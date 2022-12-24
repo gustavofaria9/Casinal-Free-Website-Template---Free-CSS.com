@@ -296,7 +296,12 @@ button {
 .padding_left_15 {
   padding-left: 10px;
 }
-
+.padding_left_5 {
+  padding-left: 5px;
+}
+.padding_bottom_40 {
+  padding-bottom: 40px;
+}
 .donate_bt {
   width: 50px;
   float: left;
@@ -423,13 +428,6 @@ button {
   background: var(--color-primary);
   color: #000;
 }
-#osm-map {
-  left: 3%;
-  margin-top: 300px;
-  margin-left: 70%;
-  width: 400px;
-  height: 400px;
-}
 
 /* banner section end */
 
@@ -438,10 +436,9 @@ button {
 .services_section {
   width: 100%;
   float: left;
-}
-.services_section_2 {
-  width: 100%;
-  float: left;
+  padding-bottom: 5px;
+  /* padding-left: 20%; */
+  position: relative;
 }
 .services_taital {
   width: 100%;
@@ -450,6 +447,15 @@ button {
   color: #170e09;
   text-align: center;
   font-weight: bold;
+  /* position: sticky; */
+  /* padding-left: 20%; */
+}
+.services_section_2 {
+  /*images */
+  width: 100%;
+  float: left;
+  /* padding-left: 1%; */
+  display: flex;
 }
 .services_taital::after {
   content: "";
@@ -463,6 +469,25 @@ button {
   display: block;
   border-radius: 10px;
 }
+.services_taital_2 {
+  width: 100%;
+  float: left;
+  font-size: 40px;
+  color: #170e09;
+  text-align: center;
+  font-weight: bold;
+}
+
+#osm-map {
+  text-align: center;
+  margin-top: 0px;
+  /* margin-left: 10%; */
+  /* padding-bottom: 20px; */
+  width: 400px;
+  height: 400px;
+  position: relative;
+  margin-bottom: 40px;
+}
 
 .gallery_main {
   width: 100%;
@@ -472,7 +497,7 @@ button {
 .image_main {
   width: 100%;
   position: relative;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 .image_1 {
   width: 99.5%;
@@ -909,7 +934,7 @@ button {
   float: left;
   background-color: #202020;
   height: auto;
-  padding-bottom: 90px;
+  padding-bottom: 20px;
 }
 
 .mail_section {
@@ -959,7 +984,6 @@ button {
   float: left;
   font-size: 16px;
   color: #ffffff;
-  padding-top: 20px;
 }
 
 .call_text a {
@@ -972,13 +996,13 @@ button {
 .footer_section_2 {
   width: 100%;
   float: left;
-  margin-top: 100px;
+  margin-top: 25px;
 }
 
 .footer_logo {
   width: 100%;
   float: left;
-  padding: 134px 0px;
+  padding: 100px 0px;
 }
 
 .footer_menu {
@@ -1019,6 +1043,7 @@ button {
   margin-left: 0px;
   line-height: 40px;
   margin-top: 0px;
+  text-align: left;
 }
 
 .information_main {
