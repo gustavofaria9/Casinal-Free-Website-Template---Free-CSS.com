@@ -495,7 +495,7 @@ button {
 }
 
 .image_main {
-  height: 286px;
+  height: 200px;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
