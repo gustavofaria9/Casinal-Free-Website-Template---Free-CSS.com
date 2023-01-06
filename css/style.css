@@ -495,9 +495,16 @@ button {
 }
 
 .image_main {
+  height: 286px;
   width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  /* border: 1px solid black; */
   position: relative;
-  margin-top: 20px;
+  /* object-position: center; */
+  /* margin-top: 20px; */
+  margin: 5px 5px 5px 5px;
+  /* aspect-ratio: 3/2; */
 }
 .image_1 {
   width: 99.5%;
@@ -523,10 +530,11 @@ button {
 }
 
 .image_8 {
+  flex: 1 0 21%;
+  margin: 0px;
   opacity: 1;
-  display: block;
-  width: 100%;
-  height: auto;
+  display: inline-block;
+  height: 100%;
   transition: 0.5s ease;
   backface-visibility: hidden;
 }
