@@ -488,7 +488,7 @@ button {
   position: relative;
   margin-bottom: 40px;
   float: left;
-  margin-left: 10%;
+  margin-left: 5%;
 }
 
 .gallery_main {
@@ -1099,6 +1099,6 @@ button {
 }
 .cotizar_button {
   padding-top: 10px;
-  margin-left: 20px;
+  margin-left: 4%;
   padding-bottom: 20px;
 }
