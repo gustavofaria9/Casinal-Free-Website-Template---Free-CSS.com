@@ -112,10 +112,11 @@ form.addEventListener("submit", submitForm);
 const mapStyle = document.getElementById("map");
 const emailInput = document.querySelector(".email_text");
 const directions = document.querySelector(".directions");
-
+const submitButton = document.querySelector(".submit_button");
 window.onload = function () {
   if (!L.Browser.mobile) mapStyle.style.marginLeft = "12%";
   if (!L.Browser.mobile) emailInput.style.marginLeft = "10px";
   if (L.Browser.mobile) directions.style.marginTop = "0%";
   if (L.Browser.mobile) directions.style.marginBottom = "6%";
+  if (L.Browser.mobile) submitButton.style.marginLeft = "-2%";
 };
