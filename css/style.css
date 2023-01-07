@@ -953,15 +953,17 @@ button {
 }
 
 .email_text {
-  width: 65%;
-  float: right;
+  width: 37%;
+  float: left;
   font-size: 18px;
   color: #363636;
   background-color: #ffffff !important;
   border: 0px;
-  padding: 16px 20px 10px 30px;
+  padding: 16px 5px 10px 30px;
   height: auto;
   border-radius: 40px;
+  position: relative;
+  margin-left: 20px;
 }
 
 .subscribe_bt {
