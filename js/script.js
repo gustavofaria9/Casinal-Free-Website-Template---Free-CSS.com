@@ -113,10 +113,16 @@ const mapStyle = document.getElementById("map");
 const emailInput = document.querySelector(".email_text");
 const directions = document.querySelector(".directions");
 const submitButton = document.querySelector(".submit_button");
+const servicesImages = document.querySelectorAll(".image_8");
 window.onload = function () {
+  //for PC browser
   if (!L.Browser.mobile) mapStyle.style.marginLeft = "12%";
   if (!L.Browser.mobile) emailInput.style.marginLeft = "10px";
+  //for mobile
   if (L.Browser.mobile) directions.style.marginTop = "0%";
   if (L.Browser.mobile) directions.style.marginBottom = "6%";
   if (L.Browser.mobile) submitButton.style.marginLeft = "-2%";
+  if (L.Browser.mobile) emailInput.style.paddingLeft = "15px";
+  if (L.Browser.mobile)
+    servicesImages.forEach((element) => (element.style.height = "150px"));
 };
