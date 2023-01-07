@@ -3,7 +3,7 @@ var element = document.getElementById("osm-map");
 
 // Height has to be set. You can do this in CSS too.
 // Create Leaflet map on map element.
-var map = L.map(element);
+var map = L.map(element, { dragging: !L.Browser.mobile });
 
 // Add OSM tile layer to the Leaflet map.
 L.tileLayer("http://{s}.tile.osm.org/{z}/{x}/{y}.png", {
@@ -19,4 +19,3 @@ map.setView(target, 30);
 
 // Place a marker on the same location.
 L.marker(target).addTo(map);
-L.map("map", { dragging: !L.Browser.mobile });
