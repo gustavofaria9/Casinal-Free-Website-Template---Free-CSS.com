@@ -19,3 +19,4 @@ map.setView(target, 30);
 
 // Place a marker on the same location.
 L.marker(target).addTo(map);
+L.map("map", { dragging: !L.Browser.mobile });

@@ -487,6 +487,8 @@ button {
   height: 400px;
   position: relative;
   margin-bottom: 40px;
+  float: left;
+  margin-left: 10%;
 }
 
 .gallery_main {
@@ -1088,4 +1090,14 @@ button {
 
 .margin_top_90 {
   margin-top: 90px;
+}
+.adress_box {
+  padding-top: 20px;
+  float: left;
+  margin: 10px;
+  margin-left: 20px;
+}
+.cotizar_button {
+  padding-top: 10px;
+  margin-left: 20px;
 }
