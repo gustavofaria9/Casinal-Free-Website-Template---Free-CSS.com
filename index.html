@@ -5,6 +5,12 @@
   xmlns:fb="http://ogp.me/ns/fb#"
 >
   <head>
+    <script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js"></script>
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css"
+    />
     <meta
       property="og:image"
       content="https://gustavofaria9.github.io/images/Rodovias-logo2.png"
@@ -54,7 +60,8 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
       media="screen"
     />
-    <link
+    <!-- activate these 2 to implement base leafnet map -->
+    <!-- <link
       rel="stylesheet"
       href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
       integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
@@ -64,7 +71,9 @@
       src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
       integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
       crossorigin=""
-    ></script>
+    ></script> -->
+    <script src="https://www.mapquestapi.com/sdk/leaflet/v2.2/mq-map.js?key=y7E6iDZyiPBtIA9A2J75Ywkw6m7Xl0Gc"></script>
+    <script src="https://www.mapquestapi.com/sdk/leaflet/v2.2/mq-routing.js?key=y7E6iDZyiPBtIA9A2J75Ywkw6m7Xl0Gc"></script>
   </head>
   <body>
     <!--header section start -->
@@ -325,9 +334,10 @@
     <!-- map section Start -->
     <div class="container">
       <h1 class="services_taital_2">
-        <span style="color: #12bcb3">Comienza tu cotización</span> Aqui!
+        <span style="color: #12bcb3">¡Comienza tu cotización</span> Aqui!
       </h1>
       <div id="osm-map" class="layout_padding"></div>
+      <div id="map" class="layout_padding"></div>
       <div class="directions">
         <div class="adress_box">
           <input
