@@ -121,18 +121,26 @@ const carrouselImage1 = document.querySelector(".image_1");
 const carrouselImage2 = document.querySelector(".image_2");
 const carrouselImage3 = document.querySelector(".image_3");
 const socialMedia = document.querySelector(".call_section");
+const headerSection = document.querySelector(".header_section");
+const suscribeBT = document.querySelector(".subscribe_bt");
+const selectABt = document.querySelectorAll("a");
 const selectLiSocialMedia = socialMedia.querySelectorAll(" li");
-console.log(socialMedia);
-console.log(selectLiSocialMedia);
+// console.log(socialMedia);
+// console.log(selectLiSocialMedia);
+console.log(selectABt[11]);
 window.onload = function () {
   //for PC browser
   if (!L.Browser.mobile) {
     mapStyle.style.marginLeft = "12%";
+    mapStyle.style.width = "400px";
     emailInput.style.marginLeft = "10px";
   }
   //for mobile
   if (L.Browser.mobile) {
+    selectABt[11].style.width = "80%";
+    headerSection.style.width = "100%";
     mapStyle.style.width = "100%";
+    mapStyle.style.marginRight = "0%";
     carrouselImage1.style.paddingBottom = "1%";
     carrouselImage1.style.marginTop = "-5%";
     carrouselImage2.style.paddingBottom = "1.3%";
@@ -140,8 +148,13 @@ window.onload = function () {
     carrouselImage3.style.marginLeft = "10%";
     directions.style.marginTop = "0%";
     directions.style.marginBottom = "6%";
+    directions.style.marginLeft = "0px";
+    directions.style.left = "0px";
+    directions.style.width = "100%";
     submitButton.style.marginLeft = "-2%";
+    submitButton.style.width = "80%";
     emailInput.style.paddingLeft = "15px";
+    emailInput.style.width = "100%";
     selectLiSocialMedia.forEach((element) => (element.style.left = "0px"));
   }
 
