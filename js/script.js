@@ -26,22 +26,23 @@ L.mapquest.key = "y7E6iDZyiPBtIA9A2J75Ywkw6m7Xl0Gc";
 var map = L.mapquest.map("map", {
   center: [-33.4468055, -70.6435677],
   layers: L.mapquest.tileLayer("map"),
-  zoom: 12,
+  zoom: 11,
   dragging: !L.Browser.mobile,
 });
 
 function runDirection(start, end) {
   // recreating new map layer after removal
   map = L.map("map", {
-    layers: MQ.mapLayer(),
+    layers: L.mapquest.tileLayer("map"),
     center: [-33.4468055, -70.6435677],
     zoom: 12,
   });
 
-  var dir = MQ.routing.directions();
+  var dir = L.mapquest.directions();
 
   dir.route({
-    locations: [start, end],
+    start: start,
+    end: end,
   });
 
   const CustomRouteLayer = MQ.Routing.RouteLayer.extend({
@@ -96,6 +97,7 @@ function submitForm(event) {
   // getting form data
   const start = document.getElementById("start").value;
   const end = document.getElementById("destination").value;
+  console.log(start, end);
   // run directions function
   runDirection(start, end);
 
@@ -126,3 +128,35 @@ window.onload = function () {
   if (L.Browser.mobile)
     servicesImages.forEach((element) => (element.style.height = "150px"));
 };
+
+async function fetchAsync(url) {
+  let response = await fetch(url);
+  let data = await response.json();
+  return data;
+}
+
+const dataUbicacion = fetchAsync(
+  "http://www.mapquestapi.com/directions/v2/route?key=y7E6iDZyiPBtIA9A2J75Ywkw6m7Xl0Gc&from=Clarendon+Blvd,Arlington,VA&to=2400+S+Glebe+Rd,+Arlington,+VA"
+);
+dataUbicacion.then(function (result) {
+  console.log(result); // "Some User token"
+});
+// L.mapquest.geocoding().geocode(
+//   {
+//     street: "1 City Hall Square",
+//     city: "Boston",
+//     state: "MA",
+//     postalCode: "02201",
+//   },
+//   createMap
+// );
+// function createMap(error, response) {
+//   var location = response.results[0].locations[0];
+//   var latLng = location.displayLatLng;
+//   map.remove();
+//   map = L.mapquest.map("map", {
+//     center: latLng,
+//     layers: L.mapquest.tileLayer("map"),
+//     zoom: 18,
+//   });
+// }
