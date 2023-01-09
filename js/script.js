@@ -132,6 +132,7 @@ window.onload = function () {
   }
   //for mobile
   if (L.Browser.mobile) {
+    mapStyle.style.width = "100%";
     carrouselImage1.style.paddingBottom = "1%";
     carrouselImage1.style.marginTop = "-5%";
     carrouselImage2.style.paddingBottom = "1.3%";
