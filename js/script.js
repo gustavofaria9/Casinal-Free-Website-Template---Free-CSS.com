@@ -119,6 +119,10 @@ const servicesImages = document.querySelectorAll(".image_8");
 const carrouselImage1 = document.querySelector(".image_1");
 const carrouselImage2 = document.querySelector(".image_2");
 const carrouselImage3 = document.querySelector(".image_3");
+const socialMedia = document.querySelector(".call_section");
+const selectLiSocialMedia = socialMedia.querySelectorAll(" li");
+console.log(socialMedia);
+console.log(selectLiSocialMedia);
 window.onload = function () {
   //for PC browser
   if (!L.Browser.mobile) {
@@ -136,6 +140,7 @@ window.onload = function () {
     directions.style.marginBottom = "6%";
     submitButton.style.marginLeft = "-2%";
     emailInput.style.paddingLeft = "15px";
+    selectLiSocialMedia.forEach((element) => (element.style.left = "0px"));
   }
 
   if (L.Browser.mobile)
