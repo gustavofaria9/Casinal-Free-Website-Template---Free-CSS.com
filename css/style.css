@@ -341,7 +341,8 @@ button {
   float: left;
   font-size: 16px;
   color: #f7f7fd;
-  margin: 0px;
+  margin: 5px;
+  padding-bottom: 20px;
 }
 
 .btn_main {
@@ -525,6 +526,7 @@ button {
 .image_2 {
   padding-bottom: 2%;
   width: 98.2%;
+  object-fit: contain;
   height: auto;
   transition: 0.5s ease;
   backface-visibility: hidden;
