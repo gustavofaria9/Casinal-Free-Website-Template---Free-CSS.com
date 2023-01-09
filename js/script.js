@@ -45,46 +45,46 @@ function runDirection(start, end) {
     end: end,
   });
 
-  const CustomRouteLayer = MQ.Routing.RouteLayer.extend({
-    createStartMarker: (location) => {
-      var custom_icon;
-      var marker;
+  // const CustomRouteLayer = L.Routing.RouteLayer.extend({
+  //   createStartMarker: (location) => {
+  //     var custom_icon;
+  //     var marker;
 
-      custom_icon = L.icon({
-        iconUrl: "img/red.png",
-        iconSize: [20, 29],
-        iconAnchor: [10, 29],
-        popupAnchor: [0, -29],
-      });
+  //     custom_icon = L.icon({
+  //       iconUrl: "img/red.png",
+  //       iconSize: [20, 29],
+  //       iconAnchor: [10, 29],
+  //       popupAnchor: [0, -29],
+  //     });
 
-      marker = L.marker(location.latLng, { icon: custom_icon }).addTo(map);
+  //     marker = L.marker(location.latLng, { icon: custom_icon }).addTo(map);
 
-      return marker;
-    },
+  //     return marker;
+  //   },
 
-    createEndMarker: (location) => {
-      var custom_icon;
-      var marker;
+  //   createEndMarker: (location) => {
+  //     var custom_icon;
+  //     var marker;
 
-      custom_icon = L.icon({
-        iconUrl: "img/blue.png",
-        iconSize: [20, 29],
-        iconAnchor: [10, 29],
-        popupAnchor: [0, -29],
-      });
+  //     custom_icon = L.icon({
+  //       iconUrl: "img/blue.png",
+  //       iconSize: [20, 29],
+  //       iconAnchor: [10, 29],
+  //       popupAnchor: [0, -29],
+  //     });
 
-      marker = L.marker(location.latLng, { icon: custom_icon }).addTo(map);
+  //     marker = L.marker(location.latLng, { icon: custom_icon }).addTo(map);
 
-      return marker;
-    },
-  });
+  //     return marker;
+  //   },
+  // });
 
-  map.addLayer(
-    new CustomRouteLayer({
-      directions: dir,
-      fitBounds: true,
-    })
-  );
+  // map.addLayer(
+  //   new CustomRouteLayer({
+  //     directions: dir,
+  //     fitBounds: true,
+  //   })
+  // );
 }
 
 // function that runs when form submitted
@@ -116,15 +116,28 @@ const emailInput = document.querySelector(".email_text");
 const directions = document.querySelector(".directions");
 const submitButton = document.querySelector(".submit_button");
 const servicesImages = document.querySelectorAll(".image_8");
+const carrouselImage1 = document.querySelector(".image_1");
+const carrouselImage2 = document.querySelector(".image_2");
+const carrouselImage3 = document.querySelector(".image_3");
 window.onload = function () {
   //for PC browser
-  if (!L.Browser.mobile) mapStyle.style.marginLeft = "12%";
-  if (!L.Browser.mobile) emailInput.style.marginLeft = "10px";
+  if (!L.Browser.mobile) {
+    mapStyle.style.marginLeft = "12%";
+    emailInput.style.marginLeft = "10px";
+  }
   //for mobile
-  if (L.Browser.mobile) directions.style.marginTop = "0%";
-  if (L.Browser.mobile) directions.style.marginBottom = "6%";
-  if (L.Browser.mobile) submitButton.style.marginLeft = "-2%";
-  if (L.Browser.mobile) emailInput.style.paddingLeft = "15px";
+  if (L.Browser.mobile) {
+    carrouselImage1.style.paddingBottom = "1%";
+    carrouselImage1.style.marginTop = "-5%";
+    carrouselImage2.style.paddingBottom = "1.3%";
+    carrouselImage3.style.paddingBottom = "5.3%";
+    carrouselImage3.style.marginLeft = "10%";
+    directions.style.marginTop = "0%";
+    directions.style.marginBottom = "6%";
+    submitButton.style.marginLeft = "-2%";
+    emailInput.style.paddingLeft = "15px";
+  }
+
   if (L.Browser.mobile)
     servicesImages.forEach((element) => (element.style.height = "150px"));
 };
@@ -136,7 +149,7 @@ async function fetchAsync(url) {
 }
 
 const dataUbicacion = fetchAsync(
-  "http://www.mapquestapi.com/directions/v2/route?key=y7E6iDZyiPBtIA9A2J75Ywkw6m7Xl0Gc&from=Clarendon+Blvd,Arlington,VA&to=2400+S+Glebe+Rd,+Arlington,+VA"
+  "https://www.mapquestapi.com/directions/v2/route?key=y7E6iDZyiPBtIA9A2J75Ywkw6m7Xl0Gc&from=Clarendon+Blvd,Arlington,VA&to=2400+S+Glebe+Rd,+Arlington,+VA"
 );
 dataUbicacion.then(function (result) {
   console.log(result); // "Some User token"
