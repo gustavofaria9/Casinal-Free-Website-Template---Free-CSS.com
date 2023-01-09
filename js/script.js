@@ -36,6 +36,7 @@ function runDirection(start, end) {
     layers: L.mapquest.tileLayer("map"),
     center: [-33.4468055, -70.6435677],
     zoom: 12,
+    dragging: !L.Browser.mobile,
   });
 
   var dir = L.mapquest.directions();
