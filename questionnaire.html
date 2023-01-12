@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Carousel Page</title>
+    <link rel="stylesheet" type="text/css" href="css/questionnaire.css" />
+  </head>
+  <body>
+    <div class="logo-container">
+      <a class="logo" href="index.html"
+        ><img
+          style="width: 350px; height: 200px"
+          src="images/Rodovias-logo2.png"
+      /></a>
+    </div>
+    <form id="regForm" action="">
+      <h1 class="services_taital">
+        <span style="color: #12bcb3">¡Comenzemos con tu cotización!</span> para
+        ello contesta las siguientes preguntas 😉
+      </h1>
+
+      <!-- One "tab" for each step in the form: -->
+      <div class="tab">
+        ¿Cuál es tu nombre?
+        <p>
+          <input
+            placeholder="Primer nombre"
+            oninput="this.className = ''"
+            class="input_form"
+          />
+        </p>
+        <p>
+          <input
+            placeholder="Apellido"
+            oninput="this.className = ''"
+            ;
+            class="input_form"
+          />
+        </p>
+      </div>
+
+      <div class="tab">
+        Indiquenos su información de contacto:
+        <p>
+          <input
+            placeholder="E-mail"
+            oninput="this.className = ''"
+            class="input_form"
+          />
+        </p>
+        <p>
+          <input
+            placeholder="Teléfono"
+            oninput="this.className = ''"
+            class="input_form"
+          />
+        </p>
+      </div>
+
+      <div class="tab">
+        ¿Para cuándo requiere la mudanza?
+        <p>
+          <input
+            placeholder="dd"
+            oninput="this.className = ''"
+            class="input_form"
+          />
+        </p>
+        <p>
+          <input
+            placeholder="mm"
+            oninput="this.className = ''"
+            class="input_form"
+          />
+        </p>
+        <p>
+          <input
+            placeholder="yyyy"
+            oninput="this.className = ''"
+            class="input_form"
+          />
+        </p>
+      </div>
+
+      <div class="tab">
+        Login Info:
+        <p>
+          <input
+            placeholder="Username..."
+            oninput="this.className = ''"
+            class="input_form"
+          />
+        </p>
+        <p>
+          <input
+            placeholder="Password..."
+            oninput="this.className = ''"
+            class="input_form"
+          />
+        </p>
+      </div>
+
+      <div style="overflow: auto">
+        <div style="float: right">
+          <button type="button" id="prevBtn" onclick="nextPrev(-1)">
+            Volver
+          </button>
+          <button type="button" id="nextBtn" onclick="nextPrev(1)">
+            Continuar
+          </button>
+        </div>
+      </div>
+
+      <!-- Circles which indicates the steps of the form: -->
+      <div style="text-align: center; margin-top: 40px">
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+      </div>
+    </form>
+    <script src="js/questionnaireScript.js"></script>
+  </body>
+</html>
