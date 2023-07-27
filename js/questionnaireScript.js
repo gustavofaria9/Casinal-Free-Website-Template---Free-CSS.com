@@ -10,6 +10,7 @@ function showTab(n) {
     document.getElementById("prevBtn").style.display = "none";
   } else {
     document.getElementById("prevBtn").style.display = "inline";
+    document.querySelector(".services_taital").style.display = "none";
   }
   if (n == x.length - 1) {
     document.getElementById("nextBtn").innerHTML = "Obtener cotización";

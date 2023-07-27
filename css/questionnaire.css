@@ -63,6 +63,7 @@ input.invalid {
   display: flex; */
   height: 200px;
   position: relative;
+  margin-bottom: -100px;
   /* border: 3px solid #dbe4ed; Border color is optional */
 }
 .logo {
@@ -83,18 +84,42 @@ input.invalid {
   /* position: sticky; */
   /* padding-left: 20%; */
   font-family: "Poppins", sans-serif;
-  margin-top: -10%;
+  margin-top: 0%;
   margin-bottom: 60px;
 }
 .input_form {
   font-family: "Poppins", sans-serif;
+  font-size: 20px;
   border: 2px solid black !important;
-  border-radius: 5px;
-  border-radius: 7px !important;
+  border-radius: 20px !important;
   height: 56px;
   padding: 10px;
   text-align: center;
   background-image: none !important;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+}
+#prevBtn {
+  background-color: var(--color-secondary); /* Green */
+  border: none;
+  border-radius: 11px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  display: inline-block;
+}
+#nextBtn {
+  background-color: var(--color-primary); /* Green */
+  border: none;
+  border-radius: 11px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  display: inline-block;
 }
